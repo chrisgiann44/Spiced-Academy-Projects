@@ -1,0 +1,194 @@
+body {
+    background-image: url("/images/flag.jpg");
+    background-size: cover;
+    background-repeat: repeat;
+    text-align: center;
+    color: white;
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin: 0;
+}
+
+.regform {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loginlink {
+    margin-top: 1%;
+    font-size: 1.2em;
+}
+
+.regbutton {
+    text-align: center;
+    margin-top: 3%;
+    width: 200px;
+    height: 25px;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 1%;
+}
+
+.nav {
+    margin-top: 1px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: white;
+    align-items: center;
+    cursor: pointer;
+    font-size: 2em;
+    opacity: 0.6;
+}
+
+.navs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 50px;
+}
+
+.navs:hover {
+    background-color: grey;
+    border: 1px white solid;
+    border-radius: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: blue;
+}
+
+.nav a:hover {
+    color: white;
+}
+
+h1 {
+    margin: 10px;
+    font-size: 3.8em;
+}
+
+.text {
+    font-size: 2.3em;
+}
+
+.dltbtn {
+    text-align: center;
+    margin-top: 3%;
+    background-color: black;
+    width: 200px;
+    height: 25px;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+
+h3 {
+    font-size: 1em;
+}
+
+a {
+    color: white;
+}
+
+.signerslink {
+    font-size: 2.8em;
+    margin-top: 2%;
+}
+
+img {
+    background-color: white;
+    border: 2px solid green;
+    width: 40%;
+    height: 40%;
+}
+
+.error {
+    color: red;
+    font-size: 1.5em;
+}
+
+.inputs {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+input {
+    font-size: 1.5em;
+    margin: 3%;
+    width: 300px;
+    height: 30px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lgt {
+    text-align: center;
+    margin-top: 1%;
+    background-color: red;
+    width: 100px;
+    height: 25px;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+.signersres {
+    margin-top: 40px;
+}
+
+.signersres h4 {
+    font-size: 2em;
+    margin: 0;
+}
+
+canvas {
+    cursor: pointer;
+    margin-top: 1%;
+    margin-bottom: 20px;
+    background: white;
+    border-radius: 4px dotted black;
+}
+
+#resetsign {
+    margin-top: 0.2%;
+    margin-bottom: 1%;
+    border-radius: 10px;
+    box-shadow: 2px 2px;
+    color: black;
+    background-color: grey;
+    font-size: 1em;
+    width: 150px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#submit {
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 4px 4px;
+    color: white;
+    background-color: blue;
+    margin-top: 1%;
+    font-size: 1.5em;
+    width: 300px;
+    height: 40px;
+}

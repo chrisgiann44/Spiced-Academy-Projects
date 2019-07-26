@@ -1,0 +1,24 @@
+<h2>Hi {{name}}, you can edit your profile here.</h2>
+
+<form class="regform" method="post">
+
+    <input type="text" name="name" placeholder="Name" value={{name}}>
+    <input type="text" name="surname" placeholder="Surname" value={{surname}}>
+    <input type="email" name="email" placeholder="Email" value={{email}}>
+    <input type="password" name="password" placeholder="Password">
+
+    <input type="number" name="age" placeholder="Age" value={{#if age}}{{age}}{{/if}} min="18" max= "120">
+    <input type="text" name="city" placeholder="City" value={{#if city}}{{city}}{{/if}}>
+    <input type="text" name="homepage" placeholder="Homepage" value={{#if homepage}}{{homepage}}{{/if}}>
+
+    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+    <button>Update</button>
+</form>
+
+<div class="dltbtn" >
+    <a href="/deletion">Delete Account</a>
+</div>
+
+{{#if error}}
+    <span class="error">Please check your input!</span>
+  {{/if}}
