@@ -1,7 +1,9 @@
 const express = require("express");
 const app = express();
 const server = require("http").Server(app);
-const io = require("socket.io")(server, { origins: "localhost:8080" }); //should be changed if deployed to HEROKU
+const io = require("socket.io")(server, {
+    origins: "localhost:8080" || "process.env.PORT"
+}); //should be changed if deployed to HEROKU
 
 const db = require("./utils/db");
 const bc = require("./utils/bc");
