@@ -1,0 +1,20 @@
+<h1>Welcome to my e-Petition!</h1>
+
+<h2>Please feel free to register!</h2>
+
+<form class="regform" method="post">
+    <input type="text" name="name" placeholder="Name">
+    <input type="text" name="surname" placeholder="Surname">
+    <input type="email" name="email" placeholder="Email">
+    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+    <input type="password" name="password" placeholder="Password">
+    <button>Register</button>
+</form>
+
+{{#if error}}
+<span class="error">Email already in use!</span>
+{{/if}}
+
+<div class="loginlink">
+  <a href="/login">Already registered?<br>Log in here!</a>
+</div>

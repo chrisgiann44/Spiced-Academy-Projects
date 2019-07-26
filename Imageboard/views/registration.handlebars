@@ -1,0 +1,31 @@
+<div class=container id="registration">
+
+    <h2>Create a free account and add your images now!</h2>
+    <h3>Allready a user? Please login <a href="/">here!</a> </h3>
+
+    <div class="uploaded" v-if="messageVis">
+        New foto was uploaded by <span>\{{imageUploader}}</span>
+    </div>
+    
+    <div class="form-container">
+        <form method="post">
+            <input v-model='form.name' type="text" name="name" placeholder="Name">
+            <input v-model='form.email' type="email" name="email" placeholder="Email">
+            <input v-model='form.password' type="password" name="password" placeholder="Password">
+            <button>Register</button>
+        </form>
+    </div>
+
+    <div class="img-container">
+        <a class="imagediv" :href="'#' + image.id" v-for="image in images">
+            <img class="imgs" :src="image.url" @click="toggleImage(image.id)">
+            <div class="details">
+                <span>\{{image.title}}</span>
+            </div>
+        </a>
+    </div>
+
+    <button v-on:click="getMoreImages"  v-if="buttonVis">More</button>
+
+    <popupwindow :image-id="imageId" class="popupout" v-if="imageId" @closepopup="toggleImage(null)"></popupwindow>
+</div>

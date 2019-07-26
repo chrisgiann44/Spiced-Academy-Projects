@@ -1,0 +1,27 @@
+<h1>Please be part of the people that want a greater <a href="https://en.wikipedia.org/wiki/Europe" target="_blank">Europe</a>.</h1>
+<span class="text">Let's make Europe stronger than ever! <b> Europe is our home</b>.<br>
+        Let's dont let Europe fall into the Middleages again.</span>
+
+<h2>{{username}}, please use the pad below to sign!</h2>
+
+{{#if error}}
+    <span class="error">Please do not try to trick me. Try to sign!</span>
+  {{/if}}
+
+<div class="inputs">
+    <form class="input" method="post">
+    <div>
+        <input id ="hiddeninput" type="hidden" name="signature">
+        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+    </div>
+    <div>
+        <canvas id="canvas" width="610px" height="230px"></canvas>
+    </div>
+    <div>
+        <button type= "button" id="resetsign" >Reset Signature</button>
+    </div>
+    <div>
+        <button id="submit">Submit Signature</button>
+    </div>
+    </form>
+</div>

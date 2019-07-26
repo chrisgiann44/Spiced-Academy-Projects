@@ -1,0 +1,18 @@
+<h1>Welcome Back!</h1>
+
+<h2>Please feel free to login!</h2>
+
+{{#if error}}
+<span class="error">Wrong Credentials!</span>
+{{/if}}
+
+<form class="regform" method="post">
+    <input type="email" name="email" placeholder="Email">
+    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+    <input type="password" name="password" placeholder="Password">
+    <button>Log In</button>
+</form>
+
+<div class="regbutton">
+    <a href="/registration">no Account yet?<br> Please register here!</a>
+</div>

@@ -1,0 +1,11 @@
+<h2>{{totalSigners}} of us from {{#if city}}{{city}}{{/if}} already signed!</h2>
+
+<div class="signersres">
+    {{#signers}}
+    {{#if homepage}}
+    <h4> <a href="{{homepage}}"> {{name}} {{surname}}</a> {{age}} <a href="/petition/signers/{{city}}">{{city}}</a></h4>
+    {{else}}
+    <h4> {{name}} {{surname}} {{age}} <a href="/petition/signers/{{city}}">{{city}}</a></h4>
+    {{/if}}
+    {{/signers}}
+</div>

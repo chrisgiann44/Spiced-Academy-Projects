@@ -1,0 +1,28 @@
+{
+    "name": "imageboard",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node index.js"
+    },
+    "engines": {
+        "node": "10.15.1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.15.2",
+        "express": "^4.14.0",
+        "knox-s3": "^0.9.5",
+        "multer": "^1.2.0",
+        "uid-safe": "^2.1.4",
+        "bcryptjs": "^2.4.3",
+        "cookie-parser": "^1.4.3",
+        "cookie-session": "^2.0.0-alpha.1",
+        "csurf": "^1.9.0",
+        "express-handlebars": "^3.0.0",
+        "spiced-pg": "^1.0.0"
+    }
+}

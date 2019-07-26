@@ -1,0 +1,368 @@
+body {
+    margin-left: 5px;
+    text-align: center;
+}
+
+form {
+    width: 80%;
+}
+
+input {
+    width: 10%;
+    height: 20px;
+    margin-bottom: 5px;
+}
+
+button {
+    width: 75px;
+    height: 30px;
+    color: white;
+    font-weight: bold;
+    background-color: #6e7684;
+    padding: 0;
+    border-radius: 35%;
+    cursor: pointer;
+}
+
+#bin {
+    height: 18px;
+    width: 20px;
+}
+
+#bin:hover {
+    cursor: pointer;
+    background-color: #d5dded;
+    border-radius: 50%;
+    transform: scale(1.5);
+}
+
+.details {
+    align-content: center;
+    margin-top: 6px;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.form-container {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #c5cfe0;
+    border-radius: 20px;
+    height: 70px;
+    align-items: center;
+    align-content: center;
+}
+.img-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 20px;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.imagediv {
+    display: flex;
+    cursor: grab;
+    margin-right: 20px;
+    flex-direction: column;
+    background-color: #c5cfe0;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 7px;
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.imagediv:hover {
+    transform: scale(1.01);
+    box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.imgs {
+    border-radius: 5px;
+    width: 260px;
+    height: 150px;
+}
+
+span {
+    align-self: center;
+    width: 92%;
+    background-color: white;
+    border-radius: 5px;
+    color: black;
+    margin: 0;
+    font-weight: 600;
+    line-height: 1em;
+    font-size: 1em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 4px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+h5 {
+    margin: 0px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.maindetails {
+    justify-content: space-around;
+    align-content: flex-start;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 55%;
+    margin-bottom: 10px;
+}
+
+.exit {
+    padding-top: 2px;
+    border-radius: 20px;
+    width: 33%;
+    font-size: 1.4em;
+    height: 35px;
+    float: right;
+    margin: 5px;
+}
+
+.arrowdivs {
+    width: 5%;
+    height: 50px;
+    align-self: center;
+}
+
+.arrow {
+    width: 100%;
+    height: 100%;
+    align-self: center;
+    cursor: pointer;
+}
+
+.rarrow {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    transform: rotate(180deg);
+}
+
+#x {
+    background-color: white;
+    float: right;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 35px;
+    height: 30px;
+    padding-top: 5px;
+    padding-bottom: 0;
+    border: 1px solid black;
+}
+
+.innerimage {
+    height: 100%;
+    width: 70%;
+}
+
+.uploaded {
+    font-size: 2em;
+    color: red;
+}
+
+.innerimage img {
+    border: 1px solid black;
+    border-radius: 10px;
+    min-width: 75vh;
+    max-width: 75vh;
+    height: 100%;
+    width: 100%;
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.sidedetails {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+.comment {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #c5cfe0;
+    font-weight: bold;
+    text-align: left;
+    height: 50%;
+    padding: 5px;
+    margin-top: 10px;
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.comment p {
+    padding: 0;
+    line-height: 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form input {
+    width: 100%;
+}
+
+.form button {
+    width: 100%;
+    height: 25%;
+}
+
+#commbox {
+    height: 85px;
+}
+
+.imgdetails {
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #c5cfe0;
+    font-weight: bold;
+    text-align: left;
+    height: 50%;
+}
+
+.commentboxtitle {
+    background-color: #c5cfe0;
+    text-align: left;
+    margin-bottom: 5px;
+    display: grid;
+    grid-template-columns: 20% 50% 30%;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 1%;
+    box-shadow: 1px 2px 75px -20px rgba(0, 0, 0, 0.75);
+}
+
+.commentbox {
+    padding-bottom: 50px;
+    background-color: white;
+    text-align: left;
+    margin-bottom: 5px;
+    display: grid;
+    grid-template-columns: 20% 50% 30%;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 1%;
+    box-shadow: 1px 2px 75px -20px rgba(0, 0, 0, 0.75);
+}
+
+.commentbox p {
+    padding: 0;
+    line-height: 0;
+}
+
+.scrollcomments {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 98%;
+    height: 40%;
+    overflow-y: scroll;
+}
+
+.popupout {
+    background-color: white;
+    border-radius: 22px;
+    align-self: center;
+    border: 2px solid black;
+    position: fixed;
+    top: 5%;
+    width: 60%;
+    height: 85%;
+    padding-bottom: 25px;
+}
+
+.popupin {
+    min-width: 90%;
+}
+.external {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.bounce-enter-active {
+    animation: bounce-in 0.5s;
+}
+.bounce-leave-active {
+    animation: bounce-out 0.5s;
+}
+@keyframes bounce-in {
+    0% {
+        transform: scale(0.5);
+        left: 1100px;
+    }
+    25% {
+        transform: scale(0.5);
+        left: 500px;
+    }
+    50% {
+        transform: scale(0.5);
+        left: 300px;
+    }
+    75% {
+        transform: scale(0.5);
+        left: 100px;
+    }
+    100% {
+        transform: scale(1);
+        left: 10px;
+    }
+}
+
+@keyframes bounce-out {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(0.5);
+        left: 300px;
+    }
+    50% {
+        transform: scale(0.5);
+        left: 1300px;
+    }
+    75% {
+        transform: scale(0.5);
+        left: 0px;
+    }
+    100% {
+        transform: scale(0.5);
+        left: -1110px;
+    }
+}

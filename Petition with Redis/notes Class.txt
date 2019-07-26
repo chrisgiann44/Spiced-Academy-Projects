@@ -1,0 +1,48 @@
+
+
+keywords: database, relational databases vs NoSQL databases, SQL, psql
+
+
+
+database: bucket where we store data. 
+
+
+
+two different ways to store data in a database: 
+
+1. tables — they look like tables you would have in Excel. RELATIONAL DATABASE. 
+   - Postgres is a relational database. 
+   - MySQL is another relational database (but we won't use it in this class)
+   - We use a programming language called SQL to talk to databases. 
+   - psql — shell / program that runs in our Terminal that's going to allow us to talk to our relational databases through the Terminal 
+2. key-value pairs — essentially the data stored would look like a Javascript object. NoSQL DATABASE.
+   - Redis is a NoSQL database (we will learn Redis later in the course)
+   - Mongodb is a NoSQL database (though we won't use it in this course)
+
+
+
+
+
+
+
+
+
+
+
+
+
+in BASH ($): createdb — create a new database  
+
+in BASH ($): dropdb — drop / delete a database 
+
+in BASH ($): psql nameOfDatabase -f path/to/SQLfileToRun command for running or executing a SQL file 
+
+
+
+in PSQL (#): INSERT — create a new row in a table. In other words, put data in a table 
+
+in PSQL (#): SELECT — read data from a table 
+
+in PSQL (#): UPDATE — update a row that already exists in your table 
+
+in PSQL (#): DELETE — delete a row from a table 

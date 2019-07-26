@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ImageBook</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <div>
+        {{{ body }}}
+    </div>
+
+
+    <script id="component" type="text/x-template">
+        <transition name="bounce">
+        <div class="external">
+            <div class="arrowdivs">
+                <a :href="'#'+ imageInfo.nextimageid"><img class="arrow" src="/images/arrow.jpg"></a>
+            </div>
+        <div class="popupin">
+            <div class="exit">
+                <span @click="closepopup" id="x">X</span>
+            </div>
+            <div class="maindetails">
+                <div class="innerimage">
+                    <img :src="imageInfo.url">
+                </div>
+                <div class="sidedetails">
+                    <div class="imgdetails">
+                        <p>Title: <br> \{{imageInfo.title}}</p>
+                        <p>Description: <br> \{{imageInfo.description }}</p>
+                        <p>Uploaded<br> by \{{imageInfo.name}}<br> on \{{imageInfo.created_at}}</p>
+                    </div>
+                    <div class="comment">
+                    <p>Add a comment!</p>
+                    <form class="form">
+                    <input v-model="form.name" type="text" name="name" placeholder="Your Name" value="{{form.name}}">
+                        <input id="commbox" v-model="form.comment" type="text" name="comment" placeholder="Your Comment">
+                        <button @click.prevent.default="uploadcomment">POST</button>
+                    </form>
+                    </div>
+                </div>
+            </div>
+                <div class="scrollcomments">
+                    <div class="imagecomments">
+                        <h2>Image Comments</h2>
+                    </div>
+                    <div class="commentboxtitle">
+                        <p>Comment by:</p> <p>Comment:</p> <p>Date:</p>
+                    </div>
+                    <div
+                    class="commentbox"
+                    v-if="comments.length > 0"
+                    v-for="comment in comments"
+                    >
+                    <p>\{{comment.name}}</p>
+                    <p>\{{comment.comment}}</p>
+                    <p>\{{comment.created_at}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="arrowdivs">
+            <a :href="'#'+ imageInfo.previmageid"><img class="rarrow" src="/images/arrow.jpg"></a>
+        </div>
+    </div>
+    </transition>
+    </script>
+
+    <script src="/js/vue.js"></script>
+    <script src="/js/axios.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</body>
+
+</html>

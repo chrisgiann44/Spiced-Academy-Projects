@@ -1,0 +1,11 @@
+<h2>Thanks for registering {{name}} ! <br> You are our Subscriber No {{id}}!</h2>
+
+<h2>Now please tell us just a little bit more about yourself!</h2>
+
+<form class="regform" method="post">
+    <input type="number" name="age" placeholder="Age" min="18" max= "120">
+    <input type="text" name="city" placeholder="City">
+    <input type="text" name="homepage" placeholder="Homepage">
+    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+    <button>Proceed</button>
+</form>

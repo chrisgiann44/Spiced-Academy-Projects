@@ -1,0 +1,28 @@
+<div class=container id="profile">
+
+    <h2>Welcome {{name}} to your Personal Imagebook!</h2>
+    <h3>Logout <a href="/logout">here!</a> </h3>
+
+    <div class="form-container">
+        <form method="post">
+            <input v-model='form.title' type="text" name="title" placeholder="Image Title">
+            <input v-model='form.description' type="text" name="description" placeholder="Description">
+            <input type="file" name="file" accept="image/*" @change="handleFileChange">
+            <button @click.prevent.default="uploadFile">Upload</button>
+        </form>
+    </div>
+
+    <div class="img-container">
+        <div class="imagediv"  v-for="image in images">
+            <a :href="'#' + image.id">
+                <img class="imgs" :src="image.url" @click="toggleImage(image.id)">
+            </a>
+            <div class="details">
+                <span>\{{image.title}}</span>
+                <img @click="deleteImage" src="/images/delete.png" id="bin">
+            </div>
+        </div>
+    </div>
+
+    <popupwindow :user="user" :image-id="imageId" class="popupout" v-if="imageId" @closepopup="toggleImage(null)"></popupwindow>
+</div>

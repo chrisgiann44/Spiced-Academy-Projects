@@ -1,0 +1,31 @@
+steps for completing part III.
+
+
+
+1. image info. When an image is clicked a modal should pop up that shows a bigger version of the picture, as well as the title, description, username, and timestamp.
+
+- to get the modal to show up pass the id of the image that was clicked on as a prop to the component.
+- once the component's mounted function has the id of the image that was clicked on, it should make axios GET request to the server to get info about the image that was clicked on (title, description, username, timestamp, url).
+- once mounted gets the response from the server and it has the url, desc, username etc of the image that was clicked on, it should store that info in the data of the component 
+- render the info onscreen 
+
+
+
+2. commenting. When the modal pops up you should be able to see all the comments THAT IMAGE has. User's should also have the option to submit new comments on that image. 
+
+- FIRST THINGS FIRST: get the comments to show up with the modal. When the component's mounted function runs we should make an axios GET request to get the comments from the database. 
+- When the component receives the response from the server that contains the comments, then we want to store those comments in component's data
+- from there we render those comments in the HTML template 
+- NOW WORRY ABOUT ADDING NEW COMMENTS: we'll need a form tag in the component, and the form will contain two input fields: 1. for the comment itself, and 2. for the username of the commenter 
+- when the user clicks the submit button we'll use axios to make a POST request to our server to INSERT that comment into our database. 
+- once the INSERT is successful, then we push the comment and username into the comments array that is stored in the component's data object. 
+
+
+
+3. closing the modal. 
+
+- when the user clicks on the "X" symbol, we need to send a message to the Vue instance to tell it to close the modal. 
+- process of closing the modal is simply setting id to null / false / 0.
+- hint: way we send message to the parent is using something called $emit  
+
+
