@@ -2,8 +2,12 @@ const express = require("express");
 const app = express();
 const server = require("http").Server(app);
 const io = require("socket.io")(server, {
-    origins: "localhost:8080" || "process.env.PORT"
+    origins: "localhost:8080 mysocialnetworkonline.herokuapp.com:*"
 }); //should be changed if deployed to HEROKU
+
+// const io = require("socket.io")(server, {
+//     origins: process.env.PORT || 5000
+// }); //should be changed if deployed to HEROKU
 
 const db = require("./utils/db");
 const bc = require("./utils/bc");
@@ -244,7 +248,7 @@ app.get("*", function(req, res) {
 // our server listens
 if (require.main == module) {
     server.listen(process.env.PORT || 8080, () =>
-        console.log("Server is listening...")
+        console.log("Server is listening... at " + process.env.PORT)
     );
 }
 const onlineUsers = {};
